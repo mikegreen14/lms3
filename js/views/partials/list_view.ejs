@@ -1,0 +1,30 @@
+ <table id='<%=viewModel.id%>' class="<%=viewModel.tableClasses%>">
+
+      <tr class="trow">
+        
+        <% view.columns.forEach( function(col, key){ %>
+            
+            
+        <th class="thead sortable <%=viewModel.thClasses%>" data-name="<%=col.name%>"> <%=col.label%> <i id="<%=col.name%>-asc" class="fa fa-arrow-up" aria-hidden="true" style="display:none"></i><i id="<%=col.name%>-dsc" class="fa fa-arrow-down" aria-hidden="true" style="display:none"></i> </th>
+        <% }) %>
+      
+        <th class="thead <%=viewModel.thClasses%>"> Actions </th>
+      </tr>
+    
+      <% data.forEach(function(de){ %>
+        <tr data-id = "<%=de.id%>" >
+          
+          <% viewModel.columns.forEach(function(col, key){ %>
+          
+            <td data-bs-toggle="popover"><%=de[col.name]%></td>
+            <% }) %>
+          <td>
+            <span class="editAction fas fa-edit" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#<%=viewModel.editModalContainerId%>"></span>
+
+            <span class="fas fa-trash" data-bs-toggle="modal" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-target="#<%=viewModel.deleteModalContainerId%>"></span>
+
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+   
