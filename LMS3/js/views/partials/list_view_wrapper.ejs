@@ -1,0 +1,118 @@
+<!--Other Team Info-->
+<div class="col-4 shadow-lg rounded-3 p-3 mb-3 bg-black bg-gradient bg-opacity-75 text-white table-responsive">
+  <h2>LATEST RESULTS</h2>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th class="bg-black bg-gradient" scope="col">Team Name</th>
+        <th class="bg-black bg-gradient" scope="col">Wins</th>
+        <th class="bg-black bg-gradient" scope="col">Loses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="bg-black bg-opacity-50" scope="row">Russel Will's Son</th>
+        <td class="bg-black bg-opacity-50">10</td>
+        <td class="bg-black bg-opacity-50">1</td>
+      </tr>
+      <tr>
+        <th class="bg-black bg-opacity-50" scope="row">Ketchup and Mostert</th>
+        <td class="bg-black bg-opacity-50">9</td>
+        <td class="bg-black bg-opacity-50">2</td>
+      </tr>
+      <tr>
+        <th class="bg-black bg-opacity-50" scope="row">Oh Saquon You See</th>
+        <td class="bg-black bg-opacity-50">7</td>
+        <td class="bg-black bg-opacity-50">4</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class=" shadow-lg rounded-3 p-3 mb-3 bg-black bg-gradient bg-opacity-75 text-white">
+    <h2>FIELD INFORMATION</h2>
+    <p>Sat 2pm-8pm</p>
+    <p>9723 S Chesapeake Dr. South Jordan UT 84095</p>
+
+  </div>
+</div>
+<div class="col-sm-8">
+
+  <div class="shadow-lg rounded-3 p-3 bg-black bg-opacity-75 bg-gradient ">
+    <!--render team page here-->
+
+    <main class="">
+      <div class="row">
+        <div class="col-12 d-flex">
+
+         
+        </div>
+        <div class="col-12 d-flex justify-content-between">
+          <h1 class="w-50 text-white"> <%=viewModel.listTitle%> </h1>
+          <div class="d-flex m-2 w-50 justify-content-end">
+            <button id="newButton" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#<%=viewModel.editModalContainerId%>">New <%=view.entityName%></button>
+      
+            <input id="searchInput" class="me-3 w-200" placeholder="Search...">
+            <button id="clearSearch" class="btn btn-primary">Clear</button>
+          </div>
+
+        </div>
+        <div class="col-12">
+          <div id="<%=viewModel.alertContainerId%>" class="mt-2"></div>
+          <div id="tableContainer" class="mt-2">
+
+          </div>
+         
+          <button id="resetView" class="btn btn-primary clear-search-btn ml-2">Reset View</button>
+        </div>
+      </div>
+    </main>
+    <div class="modal" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Delete Item?</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            This action cannot be undone!
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <!-- data-bs-dismiss="modal" tells the javscript to hide the modal on click, both 'Yes' and 'No' buttons will hide modal.  I'm placing a specific event handler on the 'Yes' button below-->
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+            <button id="yesButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modal-->
+  <div class="modal" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="edit-modal-title">Edit Item</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" id="formContainer">
+          
+        </div>
+
+       
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

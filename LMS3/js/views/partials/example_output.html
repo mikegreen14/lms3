@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <!-- THIS IS EXAMPLE OUTPUT FROM the List Page Wrapper and List Templates 
+        USE THESE FOR REFERENCE AS YOU LOOK AT CODE. -->
+    <div class="col-sm-8">
+
+        <div class="shadow-lg rounded-3 p-3 bg-black bg-opacity-75 bg-gradient " id="teamPageWrapper">
+            <main class="">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between">
+                        <h1 class="w-75 text-white"> BBQ Teams </h1>
+                        <div class="d-flex m-2 w-25">
+                            <input id="searchInput" class="me-3 w-100" placeholder="Search...">
+                            <button id="clearSearch" class="btn btn-primary">Clear</button>
+                        </div>
+
+                    </div>
+                    <div class="col-12">
+                        <div id="alertContainer" class="mt-2"></div>
+                        <div id="tableContainer" class="mt-2">
+
+                            <table id="my-list" class="table table-dark table-hover mt-2">
+                                <tbody>
+                                    <tr class="trow">
+                                        <th class="thead sortable bg-black bg-gradient" data-name="name"> Team Name 
+                                             <i id="name-asc" class="fa fa-arrow-up" aria-hidden="true" style=""></i> 
+                                            <i id="name-desc" class="fa fa-arrow-down" aria-hidden="true" style="display:none"></i>
+                                        </th>
+
+                                        <th class="thead sortable bg-black bg-gradient" data-name="coachName"> Coach Name 
+                                             <i id="coachName-asc" class="fa fa-arrow-up" aria-hidden="true" style="display:none"></i>
+                                             <i id="coachName-desc" class="fa fa-arrow-down" aria-hidden="true" style="display:none"></i>
+                                        </th>
+
+
+
+                                        <th class="thead sortable bg-black bg-gradient" data-name="coachPhone"> Coach Phone 
+                                            <i id="coachPhone-asc" class="fa fa-arrow-up" aria-hidden="true" style="display:none"></i> 
+                                            <i id="coachPhone-desc" class="fa fa-arrow-down" aria-hidden="true" style="display:none"></i>
+                                        </th>
+
+                                        <th class="thead bg-black bg-gradient"> Actions </th>
+                                    </tr>
+
+                                    <tr data-id="3" data-bs-toggle="popover" data-bs-original-title="" title="">
+                                        <td>Charcoal Chaps</td>
+                                        <td>Jameson Locke</td>
+                                        <td>801-444-8888</td>
+                                        <td>
+                                            <span class="fas fa-edit"></span> 
+                                            <span class="fas fa-trash" data-bs-toggle="modal" data-bs-target="#myModal"></span>
+                                        </td>
+                                    </tr>
+
+                                   
+
+                                    <tr data-id="0" data-bs-toggle="popover" data-bs-original-title="" title="">
+                                        <td>Smokin' Hot Grillers</td>
+                                        <td>Miranda Keyes</td>
+                                        <td>801-444-5555</td>
+                                        <td>
+                                            <span class="fas fa-edit"></span> 
+                                            <span class="fas fa-trash" data-bs-toggle="modal" data-bs-target="#myModal"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <button id="resetView" class="btn btn-primary clear-search-btn ml-2">Reset View</button>
+                    </div>
+                </div>
+            </main>
+            <div class="modal" id="myModal" aria-hidden="true"
+                style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Burger Boys?</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            This action cannot be undone!
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <!-- data-bs-dismiss="modal" tells the javscript to hide the modal on click, both 'Yes' and 'No' buttons will hide modal.  I'm placing a specific event handler on the 'Yes' button below-->
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                            <button id="yesButton" type="button" class="btn btn-primary"
+                                data-bs-dismiss="modal">Yes</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
