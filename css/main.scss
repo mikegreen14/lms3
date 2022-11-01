@@ -1,0 +1,53 @@
+body {
+    padding-top: 100px;
+    background-image: url(../images/hero-img.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    
+  }
+  #deleteButton {
+    background-image: linear-gradient(green, darkgreen);
+    border-color: transparent;
+  }
+  #editButton {
+    background-image: linear-gradient(grey, darkgrey);
+    border-color: transparent;
+  }
+  #logo{
+    /* animation-name: animateNavLogo;
+    animation-duration: 2s; */
+  }
+  #navButton1, #navButton2 {
+    color: green;
+    /* animation-name: animateNavButton;
+    animation-duration: 2s; */
+  }
+  #navButton1.active, #navButton2.active {
+    background-color: black;
+    color: green;
+  }
+  #navButton1.active:hover, #navButton2.active:hover{
+    color: green;
+  }
+  
+  #navButton1:hover, #navButton2:hover{
+    background-color: black;
+    color: darkgreen;
+  }
+  #homeAnimate{
+    animation-name: animateHomeLogo;
+    animation-duration: 2s;
+  }
+  @keyframes animateHomeLogo{
+    0% { opacity: 0;}
+    50% {opacity: 0;}
+  }
+  @keyframes animateNavLogo{
+    0% {width: 200%; height: 200%; color: transparent;}
+    25% {width: 200%; height: 200%; color: transparent;}
+  }
+  @keyframes animateNavButton{
+    0% {visibility: hidden;}
+    100% {visibility: hidden;}
+  }
